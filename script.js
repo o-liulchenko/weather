@@ -4,7 +4,7 @@ class WeatherNow {
     }
 
     getWeather() {
-        fetch(`http://api.openweathermap.org/data/2.5/weather?id=${this.city}&appid=bf35cac91880cb98375230fb443a116f`).then(response => response.json()).then(json => { this.renderWeather(json) })
+        fetch(`https://api.openweathermap.org/data/2.5/weather?id=${this.city}&appid=bf35cac91880cb98375230fb443a116f`).then(response => response.json()).then(json => { this.renderWeather(json) })
     }
     renderWeather(weather) {
         console.log(weather);
