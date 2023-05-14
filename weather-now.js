@@ -6,7 +6,7 @@ class WeatherNow {
         // this.apiId = "bf35cac91880cb98375230fb443a116f";
     }
     get getWeather() {
-        return fetch(`http://api.openweathermap.org/data/2.5/weather?id=${this.city}&appid=${this.apiId}${this.units}&lang=uk`).then(response => response.json())
+        return fetch(`https://api.openweathermap.org/data/2.5/weather?id=${this.city}&appid=${this.apiId}${this.units}&lang=uk`).then(response => response.json())
     }
     renderWeather() {
         this.getWeather.then(weather => {
