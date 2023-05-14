@@ -1,0 +1,68 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: lightgrey;
+    font-size: 18px;
+    background: #f2f1f6;
+    margin: 0;
+}
+.wrapper{
+    width: clamp(0px, 100%, 1200px);
+    height: 100vh;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.weather-now{
+    flex: 2;
+    height: 400px;
+    background: rgba(45, 61, 82, 1);
+    margin: 0 0 15px 0;
+    padding: 20px;
+    position: relative;
+}
+.city-info{
+    margin: 0 0 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    text-align: center;
+    right: 20px;
+}
+.city-info span{
+    border: 1px solid darkgrey;
+    padding: 5px 10px;
+    background: rgba(45, 61, 82, 0.9);
+}
+.city-info .active::after{
+    content: " ▼";
+    font-size: 10px;
+}
+
+.burger span{
+    display: none;;
+}
+.active{
+    display: inline-block !important;
+    position: relative;
+}
+
+
+.units{
+    margin: 0 0 0 5px;
+    position: absolute;
+}
+#current-temperature, .units span{
+    font-size: 48px;
+    background: rgba(45, 61, 82, 0.9);
+}
+#current-feels-like{
+    font-size: 14px;
+}
+.weather-prognoz{
+    height: 300px;
+    background: #fff;
+}
